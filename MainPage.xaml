@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp2.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            <Image
+                Source="sanya_combat.png"
+                HeightRequest="185"
+                Aspect="AspectFit"
+                SemanticProperties.Description="Sanya, who likes, when somebody tap him like a humster" />
+
+            <Label
+                Text="Sanya Combat"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level1" />
+
+            <Label
+                Text="He likes, when you &lt;strong&gt;tap&lt;/strong&gt; him &lt;br&gt; and &lt;strong&gt;cooooookies&lt;/strong&gt;"
+                TextType="Html"
+                Style="{StaticResource SubHeadline}"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Welcome to dot net Multi platform App U I" />
+
+            <Button
+                x:Name="CounterBtn"
+                Text="Click cookies, dude !" 
+                TextColor="Black"
+                SemanticProperties.Hint="Counts the number of times you click Cookie and Sanya (but x2)"
+                HorizontalOptions="Fill" 
+                BackgroundColor="Bisque"/>
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="40">
+                <Button 
+                    ImageSource="cookie_one.png" 
+                    HeightRequest="130"
+                    Padding="0"
+                    Background="#10FFFFFF"
+                    Clicked="OnCounterClicked"
+                    HorizontalOptions="Fill"
+                    SemanticProperties.Description="Favourite cookie"
+                    />
+                <Button 
+                    ImageSource="cookie_two.png" 
+                    HeightRequest="130"
+                    Padding="0"
+                    Background="#10FFFFFF"
+                    Clicked="OnCounterClicked"
+                    SemanticProperties.Description="Tasty cookie"
+                    />
+
+            </StackLayout>
+
+        </VerticalStackLayout>
+
+
+    </ScrollView>
+
+</ContentPage>
